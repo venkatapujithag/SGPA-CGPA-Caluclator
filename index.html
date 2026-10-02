@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SGPA & CGPA Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎓 SGPA & CGPA Calculator</h1>
+    <p class="subtitle">Calculate your academic performance easily</p>
+
+    <div class="card">
+
+        <h2>Student Details</h2>
+
+        <input type="text" id="studentName" placeholder="Student Name">
+
+        <input type="text" id="rollNumber" placeholder="Roll Number">
+
+        <input type="number" id="semester" placeholder="Semester">
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>Subject Details</h2>
+
+        <div class="inputs">
+
+            <input type="text" id="subjectName" placeholder="Subject Name">
+
+            <input type="number" id="marks" placeholder="Marks">
+
+            <input type="number" id="credits" placeholder="Credits">
+
+            <button onclick="addSubject()">Add Subject</button>
+
+        </div>
+
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Marks</th>
+                    <th>Credits</th>
+                    <th>Grade</th>
+                    <th>Grade Point</th>
+                </tr>
+            </thead>
+
+            <tbody id="subjectTable">
+            </tbody>
+
+        </table>
+
+        <button onclick="calculateSGPA()">
+            Calculate SGPA
+        </button>
+
+        <h2 id="sgpaResult">SGPA: 0.00</h2>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>CGPA Calculation</h2>
+
+        <input
+            type="number"
+            id="semesterSGPA"
+            placeholder="Enter Semester SGPA"
+            step="0.01"
+        >
+
+        <button onclick="addSemester()">
+            Add Semester
+        </button>
+
+        <p id="semesterList">
+            Semesters added: 0
+        </p>
+
+        <button onclick="calculateCGPA()">
+            Calculate CGPA
+        </button>
+
+        <h2 id="cgpaResult">CGPA: 0.00</h2>
+
+    </div>
+
+
+    <div class="card result">
+
+        <h2>Final Result</h2>
+
+        <p id="finalStudent">Student: -</p>
+
+        <p id="finalRoll">Roll Number: -</p>
+
+        <p id="finalSGPA">SGPA: -</p>
+
+        <p id="finalCGPA">CGPA: -</p>
+
+    </div>
+
+
+    <button class="reset" onclick="resetPage()">
+        Reset
+    </button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
